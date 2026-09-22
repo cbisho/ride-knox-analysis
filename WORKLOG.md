@@ -24,7 +24,7 @@ On branch main
 nothing to commit, working tree clean
 
 
-Q1: Splitting the commits pays off as it gives you \
+Q1: Splitting the commits pays off as it gives you traceability. Additionally when you edit or change something you can track that through the commits of one document/type. Logical trace of modifications.
 
 
 
@@ -76,7 +76,7 @@ Tried to fix but could not.
 
 
 Q2:
-
+Code, text, and small outputs should be committed. Raw data, clutter, and secrets should be ignored. The images are small outputs which we may change or edit when re-running or chaning the code. The raw files should not be tampered with so they should be ignored and remain unchanged. 
 
 
 Part 3: History and Diffs (I cannot find report.md on canvas have my version and an empty version right now where I am trying to answer questions. Edit found on drive but missing a limitation sentence about cutoffs)
@@ -205,8 +205,59 @@ a0b4965 TODO 6b
 
 Q6b: A merge conflict is not Git failing; it is Git checking and confirming changes.
 
+Part 7
+
+7b:
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git push -u origin main
+Enumerating objects: 93, done.
+Counting objects: 100% (93/93), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (90/90), done.
+Writing objects: 100% (93/93), 4.69 MiB | 1.05 MiB/s, done.
+Total 93 (delta 44), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (44/44), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: 
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote: 
+remote:     - Push cannot contain secrets
+remote: 
+remote:     
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:     
+remote:     
+remote:       —— Stripe Live API Restricted Key ————————————————————
+remote:        locations:
+remote:          - commit: ab221080a3eb9a70715bf9cc0026b0653a216c93
+remote:            path: ride_knox_api_token.txt:4
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/cbisho/ride-knox-analysis/security/secret-scanning/unblock-secret/3JhNT03vimWYrfj3pyvspEWMh5m
+remote:     
+remote: 
+remote: 
+To https://github.com/cbisho/ride-knox-analysis.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/cbisho/ride-knox-analysis.git'
 
 
 
+and the repository exists.
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git remote add origin https://github.com/cbisho/ride-knox-analysis.git
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git branch -M main
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git push -u origin main
+Enumerating objects: 92, done.
+Counting objects: 100% (92/92), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (45/45), done.
+Writing objects: 100% (92/92), 4.69 MiB | 1.13 MiB/s, done.
+Total 92 (delta 44), reused 92 (delta 44), pack-reused 0
+remote: Resolving deltas: 100% (44/44), done.
+To https://github.com/cbisho/ride-knox-analysis.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
 
-NEW LINE FOR PART 8
+
