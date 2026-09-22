@@ -170,8 +170,11 @@ Merge made by the 'ort' strategy.
  memo_2026.md        | 4 ++--
  2 files changed, 6 insertions(+), 5 deletions(-)
 
- I did not get "fast-forward"
+Q5d: I did not get "fast-forward"
 Branch could fast-forward because there has been no new commits to the main branch, but git is linear so it just points to the merged commits.
 
-
-
+TODO 5e:
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git branch -d min-cutoff-2min
+Deleted branch min-cutoff-2min (was 69406d7).
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git branch
+* main
