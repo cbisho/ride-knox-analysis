@@ -84,3 +84,9 @@ Part 3: History and Diffs (I cannot find report.md on canvas have my version and
 TODO 3b: New lines rewording one minute limitation are in green.
 
 
+
+Part 4: Going to use report_ver_cora.md
+
+TODO 4a:
+
+TODO 4b:
