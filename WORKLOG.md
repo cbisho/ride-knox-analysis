@@ -287,3 +287,23 @@ ad4cd31 Add exaggerated claim (redo) on purpose for part 4, in memo_2026.md
 b94237b Redo Part 3
 
 
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git commit -m "Part 8, paste log"                                            
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 3 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   WORKLOG.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
+no changes added to commit (use "git add" and/or "git commit -a")
+
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git add WORKLOG.md 
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git commit -m "pulling new version"
+[main c7cdd2e] pulling new version
+ 1 file changed, 17 insertions(+), 1 deletion(-)
