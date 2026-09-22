@@ -261,3 +261,13 @@ To https://github.com/cbisho/ride-knox-analysis.git
 branch 'main' set up to track 'origin/main'.
 
 
+Screen Shot:
+Cannot insert into .md file
+
+Q7: origin means the github repo address, so origin = https://github.com/cbisho/ride-knox-analysis.git.
+-u links your main branch to this address/repo.
+
+
+
+
+
