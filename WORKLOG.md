@@ -79,10 +79,30 @@ Q2:
 
 
 
-Part 3: History and Diffs (I cannot find report.md on canvas have my version and an empty version right now where I am trying to answer questions.)
+Part 3: History and Diffs (I cannot find report.md on canvas have my version and an empty version right now where I am trying to answer questions. Edit found on drive but missing a limitation sentence about cutoffs)
 
 TODO 3b: New lines rewording one minute limitation are in green.
 
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git diff memo_2026.md
+diff --git a/memo_2026.md b/memo_2026.md
+index 3949d5a..ac41927 100644
+--- a/memo_2026.md
++++ b/memo_2026.md
+@@ -27,6 +27,6 @@ and novelty are uncontrolled); ~800 early-2026 trips lack end times due to an
+ app bug and are excluded from duration figures.
+ 
+ No sentence about minimum trip duration? Nothing to reword?
+-
++Minimum trip cutoffs were made at a one minute, missing possible errors made after the one minute cutoff.
+ **Recommendation:** keep the Day Pass; monitor fall 2026 before judging it
+ fully; begin relocation planning for Sequoyah Hills.
+
+TODO 3c:
+b0b60bf (HEAD -> main) Rewording limitation of minimum trip duration cutoff, memo_2026.md
+f9644c3 Tried to redo Part 3, but there is no minimum trip limitation sentence
+
+Q3:
+If you ran git commit and then git diff, you would get a blank output as git diff only shows unstaged changes.
 
 
 Part 4: Going to use report_ver_cora.md
@@ -116,4 +136,26 @@ On branch main
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   WORKLOG.md
+
+TODO 4c: 
+d9d0416 (HEAD -> main) Add exaggerated claim to report.md (on purpose, for Part 4c)
+aed7fce Part 4a and 4b completed
+
+Q4:
+
+Part 5:
+
+TODO 5a:
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git branch                     
+* main
+
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git switch -c min-cutoff-2min
+Switched to a new branch 'min-cutoff-2min'
+
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git branch
+  main
+* min-cutoff-2min
+
+TODO 5b:
+
 
