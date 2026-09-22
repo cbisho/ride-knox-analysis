@@ -205,3 +205,8 @@ a0b4965 TODO 6b
 
 Q6b: A merge conflict is not Git failing; it is Git checking and confirming changes.
 
+
+
+
+
+NEW LINE FOR PART 8
