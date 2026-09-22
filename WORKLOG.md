@@ -163,4 +163,15 @@ Q5a: One commit is correct here because the actions are connected, they were mad
 TODO 5c:
 There is no change on my main branch to memo_2026.md. However the change is on the other branch.
 
+TDDO 5d:
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git merge min-cutoff-2min
+Merge made by the 'ort' strategy.
+ analysis_2026.ipynb | 7 ++++---
+ memo_2026.md        | 4 ++--
+ 2 files changed, 6 insertions(+), 5 deletions(-)
+
+ I did not get "fast-forward"
+Branch could fast-forward because there has been no new commits to the main branch, but git is linear so it just points to the merged commits.
+
+
 
