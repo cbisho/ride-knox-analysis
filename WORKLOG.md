@@ -158,5 +158,8 @@ Switched to a new branch 'min-cutoff-2min'
 * min-cutoff-2min
 
 TODO 5b:
+Q5a: One commit is correct here because the actions are connected, they were made in affect of one another.
+
+
 
 
