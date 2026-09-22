@@ -133,7 +133,16 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 
 No changes were made to analysis_2026.ipynb so accidentally staging and then restaging leaves no change.
+
+ride-knox-analysis % git commit -m "TODO 4b--redo with new files, stage and unstaging"
+[main 1d01691] TODO 4b--redo with new files, stage and unstaging
+ 1 file changed, 5 insertions(+), 13 deletions(-)
+
+ TODO 4c:
+ 0364529 (HEAD -> main) Add exaggerated claim (redo) on purpose for part 4, in memo_2026.md
+
 Q4:
+Because the original commit does not get written over. It makes a new commit, this is good for auditing because you can track changes.
 
 Part 5:
 
