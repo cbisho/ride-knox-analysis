@@ -307,3 +307,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 (base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git commit -m "pulling new version"
 [main c7cdd2e] pulling new version
  1 file changed, 17 insertions(+), 1 deletion(-)
+
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git log --oneline
+c7cdd2e (HEAD -> main) pulling new version
+431378c Part 8, paste log
+
+Q8: Version soup, was neutralized, keeping consistent with commits makes this protection useful so you understand what is changing and why.
