@@ -178,3 +178,30 @@ TODO 5e:
 Deleted branch min-cutoff-2min (was 69406d7).
 (base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git branch
 * main
+
+Part 6
+TODO 6c:
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git merge reword-limitations
+Auto-merging memo_2026.md
+CONFLICT (content): Merge conflict in memo_2026.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+<<<<<<< HEAD
+We excluded trips longer than 24 hours (bikes likely never docked).
+=======
+No sentence about Maximum duration??
+
+Trips over 24 hours were excluded as never-docked outliers.
+
+>>>>>>> reword-limitations
+
+Q6a: The wording from the main sits in the HEAD section. This is because the main branch is where the main edits/conclusions are made so you want to document what is being edited
+
+TODO 6d:
+fa153db (HEAD -> main) conflict of max duration wording was resolved, kept main wording.
+a0b4965 TODO 6b
+7066b2a (reword-limitations) Maximum duration cutoff, again no senetnce in the memo about this?
+
+Q6b: A merge conflict is not Git failing; it is Git checking and confirming changes.
+
