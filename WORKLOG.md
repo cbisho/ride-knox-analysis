@@ -313,3 +313,13 @@ c7cdd2e (HEAD -> main) pulling new version
 431378c Part 8, paste log
 
 Q8: Version soup, was neutralized, keeping consistent with commits makes this protection useful so you understand what is changing and why.
+
+
+Reflection + AI Disclosure (5 pts); answer in WORKLOG.md
+R1. Which "oops" drill (Part 4) or the conflict (Part 6) changed how scary Git feels, and in which direction? (2–3 sentences.)
+Git still feels scary, I usually just edit everything locally on my computer, having these "limbo" versions with the commits, stresses me out. I like that there is traceability but I did not find it intuitive. 
+I struggled with this, I felt like I could not keep track of what documents I was suppose to edit and the add + commit did not feel smooth to me.
+
+R2. AI disclosure: describe any use of generative AI tools in this assignment, or state "No generative AI tools were used." Example: "I used a generative AI tool to explain what fast-forward means. All final commands, commits, and conclusions are my own."
+
+I did not use AI tools, but had to troubleshoot some things by googling. Like the wording for 8, I googled whether there was a "down" command that I needed to sync the local and main branches.
