@@ -1,3 +1,6 @@
+Cora Bishop
+cbisho30
+
 1. Added and commited files for Ride Knox into ride-knox-analysis repo.
 2. Created .gitignore file.
 	Note: cannot make multiple commits, no multiple one-line notes.
