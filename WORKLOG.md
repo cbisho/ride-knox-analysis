@@ -123,24 +123,16 @@ On branch main
 nothing to commit, working tree clean
 
 TODO 4b:
-(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git add WORKLOG.md analysis.ipynb 
+
 (base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git status
 On branch main
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   WORKLOG.md
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
 
-(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git restore --staged analysis.ipynb 
-(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git status
-On branch main
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   WORKLOG.md
+nothing added to commit but untracked files present (use "git add" to track)
 
-TODO 4c: 
-d9d0416 (HEAD -> main) Add exaggerated claim to report.md (on purpose, for Part 4c)
-aed7fce Part 4a and 4b completed
-
+No changes were made to analysis_2026.ipynb so accidentally staging and then restaging leaves no change.
 Q4:
 
 Part 5:
