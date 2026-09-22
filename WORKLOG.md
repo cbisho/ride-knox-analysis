@@ -88,5 +88,32 @@ TODO 3b: New lines rewording one minute limitation are in green.
 Part 4: Going to use report_ver_cora.md
 
 TODO 4a:
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   report_cora_ver.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git restore report_cora_ver.md 
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git status
+On branch main
+nothing to commit, working tree clean
 
 TODO 4b:
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git add WORKLOG.md analysis.ipynb 
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   WORKLOG.md
+
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git restore --staged analysis.ipynb 
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   WORKLOG.md
+
