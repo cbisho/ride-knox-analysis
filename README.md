@@ -1,5 +1,10 @@
 # Ride Knox Data Analysis 2025-2026
 
+# Who I am (github username: cbisho30)
+I am a GST PhD candidate who specializes in molecular dynamics. To improve handling data I am taking DATA 501 to improve my knowledge of data pipelines.
+
+**Personal Tools** pandas, MDAnalysis, numpy, ProLIF, matplotlib, seaborn, git 
+
 ## Overview: Ridership declined in the second half of 2025, does the data from 2026 suggest it recovers? What additional stations could be added where capacity is high?
 
 ## Data:
