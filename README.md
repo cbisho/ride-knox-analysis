@@ -46,7 +46,7 @@ Request `trips_2025.csv` and `stations.xlsx` from the Ride Knox data team.
 
 
 ## How to run:
-Install requirements in the requirements.txt file
+Install requirements in the requirements.txt (conda environement or python venv) file
 Run analysis.ipynb 
 
 
