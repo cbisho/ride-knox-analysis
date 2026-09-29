@@ -1,11 +1,22 @@
 # Ride Knox Data Analysis 2025-2026
 
+## Overview: Ridership declined in the second half of 2025, does the data from 2026 suggest it recovers? What additional stations could be added where capacity is high?
+
+## Key Findings 
+
+Casual ridership fell after July price increase (13,816 trips in June -> 9,088 in July), but Member ridership stayed consistent.
+
+The implementation of a Day Pass in 2026 increased ridership, especially on weekends. 
+![alt](./charts/rider_type_usage_per_day_2025_2026.png)
+
+Additional docking was resolved, with more docks at high pressure areas.
+
 # Who I am (github username: cbisho30)
 I am a GST PhD candidate who specializes in molecular dynamics. To improve handling data I am taking DATA 501 to improve my knowledge of data pipelines.
 
 **Personal Tools** pandas, MDAnalysis, numpy, ProLIF, matplotlib, seaborn, git 
 
-## Overview: Ridership declined in the second half of 2025, does the data from 2026 suggest it recovers? What additional stations could be added where capacity is high?
+
 
 ## Data:
 - **Data:** 247,967 cleaned trips across 24 stations
@@ -38,14 +49,6 @@ Request `trips_2025.csv` and `stations.xlsx` from the Ride Knox data team.
 Install requirements in the requirements.txt file
 Run analysis.ipynb 
 
-## Key Findings 
-
-Casual ridership fell after July price increase (13,816 trips in June -> 9,088 in July), but Member ridership stayed consistent.
-
-The implementation of a Day Pass in 2026 increased ridership, especially on weekends. 
-![alt](./charts/rider_type_usage_per_day_2025_2026.png)
-
-Additional docking was resolved, with more docks at high pressure areas.
 
 ## Limitations:
 Not all ridership data is included for 2026 only 6 months. Additionally, other factors such as weather or Knoxville events could be affecting usage but we cannot correlate that information with the given parameters. 
