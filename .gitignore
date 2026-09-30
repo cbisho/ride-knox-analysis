@@ -1,4 +1,18 @@
-1.	The raw data files themselves, wherever they sit: trips_2025.csv and stations.xlsx by name (not via a data/ folder rule; assume the files sit loose in the project folder).
-2.	Jupyter's autosave clutter.
-3.	A folder named scratch/ (the ops team's convention for throwaway experiments).
+# Raw data - never commit
+trips_2025.csv
+stations.xlsx
+trips_2026_h1.csv
+stations_2026.xlsx
+
+# Credentials
+ride_knox_api_token.txt
+
+# Jupyter autosave
+.ipynb_checkpoints/
+
+# Throwaway work
+scratch/
+
+# OS clutter
+.DS_Store
 
