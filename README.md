@@ -1,6 +1,6 @@
 # Ride Knox Data Analysis 2025-2026
 
-## Overview: Ridership declined in the second half of 2025, does the data from 2026 suggest it recovers? What additional stations could be added where capacity is high?
+## Overview: Ridership declined in the second half of 2025 after a price increase, does the data from 2026 suggest it recovers? What additional stations could be added where capacity is high? What are the high capacity stations? Are they related?
 
 ## Key Findings 
 
