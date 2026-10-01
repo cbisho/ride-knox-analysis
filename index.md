@@ -10,7 +10,7 @@ The Day Pass launched on March 1, 2026. By May (05), non-member(casual and Day P
 
 1. **[2025: What happens after July price increase?](report.md)**: what happened to ridership in 2025.
 2. **[2026: Did the Day Pass work?](memo_2026.md)**: the six-month verdict determining whether Day Passes would recover the decline of non-member riders.
-3. **[What's new, comparing 2025 and 2026](report.md)**: 
+3. **[What's new, comparing 2025 and 2026](RELEASE-NOTES.md)**: 
 
 ## For the technically curious
 
