@@ -85,3 +85,82 @@ Current (Riley):
 Not all ridership data is included for 2026 only 6 months, so later months cannot be compared. Additionally, other factors such as weather or Knoxville events could be affecting usage but we cannot correlate that information with the given parameters. Another limitation is the lack of rider occupation, some data suggests that rider-type may be related to being a student or worker.
 
 Accepted my merge version
+
+(base) cora@Coras-MacBook-Pro-2 ride-knox-riley % git add README.md
+(base) cora@Coras-MacBook-Pro-2 ride-knox-riley % git commit -m "Editing overview sentence to include more questions, related to notebook objectives"
+[house-naming 750d329] Editing overview sentence to include more questions, related to notebook objectives
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(base) cora@Coras-MacBook-Pro-2 ride-knox-riley % git push
+To https://github.com/cbisho/ride-knox-analysis
+ ! [rejected]        house-naming -> house-naming (fetch first)
+error: failed to push some refs to 'https://github.com/cbisho/ride-knox-analysis'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(base) cora@Coras-MacBook-Pro-2 ride-knox-riley % git add README.md
+(base) cora@Coras-MacBook-Pro-2 ride-knox-riley % git commit -m "Adding to limitations section"
+[house-naming 9d9f9f4] Adding to limitations section
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(base) cora@Coras-MacBook-Pro-2 ride-knox-riley % git push                                     
+To https://github.com/cbisho/ride-knox-analysis
+ ! [rejected]        house-naming -> house-naming (fetch first)
+error: failed to push some refs to 'https://github.com/cbisho/ride-knox-analysis'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(base) cora@Coras-MacBook-Pro-2 ride-knox-riley % git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 2.76 KiB | 565.00 KiB/s, done.
+From https://github.com/cbisho/ride-knox-analysis
+   59704a3..803812d  house-naming -> origin/house-naming
+
+
+ 1 file changed, 5 insertions(+)
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 43.87 KiB | 43.87 MiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/cbisho/ride-knox-analysis.git
+   e067a64..59704a3  house-naming -> house-naming
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git add README.md
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git commit -m "Editing overview in README, added one sentence summarizing purpose."
+
+[house-naming 803812d] Editing overview in README, added one sentence summarizing purpose.
+ 1 file changed, 74 insertions(+), 83 deletions(-)
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.78 KiB | 2.78 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/cbisho/ride-knox-analysis.git
+   59704a3..803812d  house-naming -> house-naming
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git add PROJECT_LOG.md 
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git commit -m "Adding riley's git push rejection"
+On branch house-naming
+Your branch is up to date with 'origin/house-naming'.
+
+nothing to commit, working tree clean
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git add PROJECT_LOG.md                           
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git commit -m "Adding riley's git push rejection"
+[house-naming d543ab4] Adding riley's git push rejection
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git add PROJECT_LOG.md                           
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git add PROJECT_LOG.md
+(base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git commit -m "Adding to PROJECT_LOG.md merger details."
+[house-naming bb43cfd] Adding to PROJECT_LOG.md merger details.
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+
