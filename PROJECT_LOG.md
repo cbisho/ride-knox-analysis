@@ -68,3 +68,20 @@ hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Incoming:
+Overview:
+Ridership declined in the second half of 2025. Does the 2026 data show a recovery, and did the new docks fix the busiest stations? This repository holds the analysis for both years. Ride Knox wants to know what type of riders and how riders are using their service.
+
+Current (Riley):
+## Overview: Ridership declined in the second half of 2025 after a price increase, does the data from 2026 suggest it recovers? What additional stations could be added where capacity is high? What are the high capacity stations? Are they related?
+
+Incoming: 
+Limitations
+Only six months of 2026 data are available (January–June), so the fall, when the 2025 decline was largest, is not observed yet. Other factors such as weather or Knoxville events could be affecting usage, but we cannot connect that information to the given data. About 800 trips from January–February 2026 are missing an end time because of an app bug. Additionally, the 10% increase of member riders has unknown cause or correlation, occupation or commuter info, such as student could be useful. 
+ 
+Current (Riley):
+## Limitations:
+Not all ridership data is included for 2026 only 6 months, so later months cannot be compared. Additionally, other factors such as weather or Knoxville events could be affecting usage but we cannot correlate that information with the given parameters. Another limitation is the lack of rider occupation, some data suggests that rider-type may be related to being a student or worker.
+
+Accepted my merge version
