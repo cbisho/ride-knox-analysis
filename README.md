@@ -47,7 +47,12 @@ Request `trips_2025.csv` and `stations.xlsx` from the Ride Knox data team.
 
 ## How to run:
 Install requirements in the requirements.txt file
-Run analysis.ipynb 
+For 2025 Ride Knox Analysis:
+    Run --> analysis_2025.ipynb 
+For 2026 Ride Knox Analysis:
+    Run --> analysis_2026.ipynb
+For combined analysis and comparion of 2025 and 2026:
+    Run --> ride_knox_2025_vs_2036.iypnb
 
 
 ## Limitations:
