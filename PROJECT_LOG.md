@@ -57,3 +57,14 @@ Part C:
 Rewrote README.md (did in word, formatting is easier).
 
 Work with Riley to edit rewritten README.md
+
+
+(base) cora@Coras-MacBook-Pro-2 ride-knox-riley % git push                                     
+To https://github.com/cbisho/ride-knox-analysis
+ ! [rejected]        house-naming -> house-naming (fetch first)
+error: failed to push some refs to 'https://github.com/cbisho/ride-knox-analysis'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
