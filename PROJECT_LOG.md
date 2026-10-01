@@ -86,6 +86,7 @@ Not all ridership data is included for 2026 only 6 months, so later months canno
 
 Accepted my merge version
 
+RILEY:
 (base) cora@Coras-MacBook-Pro-2 ride-knox-riley % git add README.md
 (base) cora@Coras-MacBook-Pro-2 ride-knox-riley % git commit -m "Editing overview sentence to include more questions, related to notebook objectives"
 [house-naming 750d329] Editing overview sentence to include more questions, related to notebook objectives
@@ -123,6 +124,8 @@ From https://github.com/cbisho/ride-knox-analysis
 
 
  1 file changed, 5 insertions(+)
+
+ CORA
 (base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git push
 Enumerating objects: 10, done.
 Counting objects: 100% (10/10), done.
@@ -163,4 +166,17 @@ nothing to commit, working tree clean
 (base) cora@Coras-MacBook-Pro-2 ride-knox-analysis % git commit -m "Adding to PROJECT_LOG.md merger details."
 [house-naming bb43cfd] Adding to PROJECT_LOG.md merger details.
  1 file changed, 18 insertions(+), 1 deletion(-)
+
+Q-C1: In Assignment 5, Part 8, your push from the clone succeeded on the first try. Riley's didn't. What was different about the state of the remote, in one or two sentences? 
+In this case since I pushed before Riley had cloned, Riley did not have the new README.md, meaning the remote had a change that made git diverge.
+In Assignment 5, part 8, the push was a fast-forward which updated the main git.
+
+
+Q-C2: You obeyed "main is sacred" perfectly, and still hit a conflict. Where does this conflict live in the workflow, and what team habit from class keeps it small? 
+The conflict is in the PR, where the merge shows the different files in the different versions.
+Keeping commits to one purpose means edits are traceable, so merge conflicts are easily spotted.
+
+Q-C3: Whose commits does HEAD mark in Riley's conflict, and why; Riley never typed the word HEAD?
+HEAD marks the commits I made. Riley never typed HEAD but it's pointing to the incoming merge edit.
+
 
