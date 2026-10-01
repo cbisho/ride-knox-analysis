@@ -56,7 +56,7 @@ For combined analysis and comparion of 2025 and 2026:
 
 
 ## Limitations:
-Not all ridership data is included for 2026 only 6 months. Additionally, other factors such as weather or Knoxville events could be affecting usage but we cannot correlate that information with the given parameters. 
+Not all ridership data is included for 2026 only 6 months, so later months cannot be compared. Additionally, other factors such as weather or Knoxville events could be affecting usage but we cannot correlate that information with the given parameters. Another limitation is the lack of rider occupation, some data suggests that rider-type may be related to being a student or worker.
 
 ## Repo Structure:
 ./ride-knox-analysis
