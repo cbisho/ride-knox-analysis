@@ -52,3 +52,8 @@ If in the public repo, anyone could pull ride knox data directly from the vendor
 
 Q-B2: Your reorganization changed at least one path that something else depended on. What broke (or would have broken), and how did you catch it?
 I decided to not make separate folders and do no paths were changed. What did change were the charts and relabeling the charts to fit a specific analysis. I reorganized the files by making copies and deleting and adding lines from past assingments so I "caught it" during that step.
+
+Part C:
+Rewrote README.md (did in word, formatting is easier).
+
+Work with Riley to edit rewritten README.md
