@@ -8,4 +8,9 @@
 
 ## Part 0
 
+TODO 0a-c: Screenshots, idk how to paste the output, my queries and outputs are in two different windows.
+
+Q0: Shows the data-types and summarizes the metadata.
+
 ## Part 1
+
