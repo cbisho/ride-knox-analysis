@@ -390,6 +390,105 @@ SELECT station_name, docks
 FROM stations, 
 ORDER BY docks DESC; 
 
+# Part 9
+"The campus stations were rebuilt over spring break. Show me the shortest completed member trips on classic bikes that started at a UT Campus station in the second half of March; I want to see whether people are just fumbling the docks."
+
+TODO 9a. Write one query, in queries/part9.sql, that returns trip_id, start_station_id, start_time, and duration_hr (your Part 2c computed column) for trips meeting all of the following, and paste the full result:
+•	rider type is member, counting all spellings in the raw data
+•	bike_type is classic
+•	started at a UT Campus station; use the station IDs you can read out of stations (S06, S07, S08, S09) with an INlist
+•	started March 15–31, 2025 inclusive
+•	the trip has a recorded end station
+•	sorted shortest duration first
+•	limited to 8 rows
+
+"trip_id","start_station_id","start_time","duration_hr"
+"T0163787","S09","2025-03-22 08:51:23",-0.2
+"T0042244","S08","2025-03-20 13:32:03",0.03
+"T0088672","S06","2025-03-27 17:11:30",0.03
+"T0124681","S08","2025-03-18 19:35:31",0.04
+"T0162779","S09","2025-03-15 09:05:45",0.05
+"T0202713","S06","2025-03-16 06:50:47",0.05
+"T0101111","S06","2025-03-16 14:43:44",0.05
+"T0224454","S08","2025-03-16 17:25:21",0.05
+
+
+TODO 9b. Look hard at the top row of your result. Something is wrong with it in a way that is not a dock fumble. Say what, and name the Module 3 data-quality problem it is.
+
+Some trips have negative values due to a bug in the app. The data-quality of those trips make them impossible trips. In this case end_time is before start_time. 
+
+TODO 9c. Add one more condition to your query so that the impossible rows are excluded, keeping everything else the same. Paste the corrected query and its result.
+
+SELECT trip_id,
+start_station_id,
+start_time,
+ROUND((julianday(end_time) - julianday(start_time)) *24,2) AS duration_hr
+FROM trips
+WHERE LOWER(rider_type) = 'member'
+AND LOWER(bike_type) = 'classic'
+AND start_station_id IN ("S06","S07","S08", "S09")
+AND end_station_id IS NOT NULL
+AND duration_hr >= 0.00
+AND start_time BETWEEN '2025-03-15' AND '2025-03-31'
+ORDER BY duration_hr ASC
+LIMIT 8;
+
+"trip_id","start_station_id","start_time","duration_hr"
+"T0042244","S08","2025-03-20 13:32:03",0.03
+"T0088672","S06","2025-03-27 17:11:30",0.03
+"T0124681","S08","2025-03-18 19:35:31",0.04
+"T0162779","S09","2025-03-15 09:05:45",0.05
+"T0202713","S06","2025-03-16 06:50:47",0.05
+"T0101111","S06","2025-03-16 14:43:44",0.05
+"T0224454","S08","2025-03-16 17:25:21",0.05
+"T0051651","S06","2025-03-23 08:44:56",0.05
+
+
+
+TODO 9d. Commit queries/ and SQL-LOG.md on a branch named feature/sql-week7-queries, push it, and open a pull requestinto main with a description saying what the queries answer. Merge it. Paste the PR URL into the log (and submit it on Canvas).
+
+branch is called M7, I already made all my commits on this branch...
+
+
+Q9e: List the clauses of your 9c query in the order the database evaluates them, and explain why ORDER BY can sort by duration_hr by name. Then try WHERE duration_hr > 0 and report what actually happened in your tool; and say what a portable version of that filter would look like.
+
+SELECT trip_id,
+start_station_id,
+start_time,
+ROUND((julianday(end_time) - julianday(start_time)) *24,2) AS duration_hr
+FROM trips
+WHERE LOWER(rider_type) = 'member'
+AND LOWER(bike_type) = 'classic'
+AND start_station_id IN ("S06","S07","S08", "S09")
+AND end_station_id IS NOT NULL
+AND duration_hr >= 0.00
+AND start_time BETWEEN '2025-03-15' AND '2025-03-31'
+ORDER BY duration_hr ASC
+LIMIT 8;
+
+My order
+SELECT --> FROM --> WHERE --> ORDER BY --> LIMIT
+Database
+FROM --> WHERE --> SELECT --> ORDER BY --> LIMIT
+
+Order by can sort duration by name because it has been selected.
+
+With WHERE duration_hr > 0
+"trip_id","start_station_id","start_time","duration_hr"
+"T0042244","S08","2025-03-20 13:32:03",0.03
+"T0088672","S06","2025-03-27 17:11:30",0.03
+"T0124681","S08","2025-03-18 19:35:31",0.04
+"T0162779","S09","2025-03-15 09:05:45",0.05
+"T0202713","S06","2025-03-16 06:50:47",0.05
+"T0101111","S06","2025-03-16 14:43:44",0.05
+"T0224454","S08","2025-03-16 17:25:21",0.05
+"T0051651","S06","2025-03-23 08:44:56",0.05
+
+Looks the same.
+
+Q9f: Which single condition in 9a would you defend most vigorously if the ops lead asked you to drop it "to get more rows"? Why?
+
+The time decimal point, there could be mistakes or bugs of very short rides that would not be relevant to the analysis.
 
 
 
