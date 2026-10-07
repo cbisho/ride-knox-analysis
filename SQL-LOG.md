@@ -201,4 +201,53 @@ AND docks <=16;
 
 Second option, is an explicit operator.
 
+# Part 5 
+
+TODO 5a. Return trip_id, start_time, and rider_type for all trips that started in September 2025, using the half-open rangepattern from class. Paste the row count and the first 3 rows.
+
+22343
+
+"trip_id","start_time","rider_type"
+"T0083627","2025-09-29 23:52:31","casual"
+"T0007532","2025-09-29 23:49:31","member"
+"T0174241","2025-09-29 23:36:16","casual"
+
+
+
+
+TODO 5b. Now write the tempting wrong version: the same query using BETWEEN '2025-09-01' AND '2025-09-30'. Paste its row count.
+22343
+
+"trip_id","start_time","rider_type"
+"T0083627","2025-09-29 23:52:31","casual"
+"T0007532","2025-09-29 23:49:31","member"
+"T0174241","2025-09-29 23:36:16","casual"
+
+
+
+TODO 5c. Not every question is about a whole month. Return trip_id and start_time for trips that started in the second half of March 2025; March 15 through March 31 inclusive. Paste the row count and the first 3 rows. (Think carefully about the upper bound; the 5b trap applies here too.)
+
+10264
+"trip_id","start_time","rider_type"
+"T0241055","2025-03-15 00:25:55","member"
+"T0179889","2025-03-15 00:31:29","casual"
+"T0134722","2025-03-15 00:51:01","member"
+
+
+TODO 5d. The ops lead suspects the casing problem you found in Module 3 is distorting her own spreadsheets. Run two versions of "member trips in October 2025": one using rider_type = 'member', and one using LOWER(rider_type) = 'member'. Paste both row counts.
+
+1st --> 134881
+2nd --> 139732
+
+
+Q5e: How many trips did 5b lose compared with 5a, and exactly why; what is true of a value like '2025-09-30 18:04:11'that excludes it?
+
+I did not lose any trips, there were no trips on the 30th when I sort them by descending. 
+'2025-09-30 18:04:11' is exlcuded from the range as it is larger than '2025-09-30'.
+
+Q5f: How many trips did the naive version in 5d miss? The ops lead says "it's only a rounding error, ignore it." Give her a one-sentence reason that is about correctness, not size.
+
+4851 trips.
+Even though 4851 trips may seem like a rounding error, it is best to keep the pipeline precise because it needs to evaluate trends and identify changes in Ride Knox customer behavior.
+
 
