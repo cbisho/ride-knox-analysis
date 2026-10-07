@@ -297,6 +297,41 @@ Not be the same is PostgreSQL.
 
 WHERE LOWER(station_name) LIKE '%park%'
 
+# Part 7
+TODO 7a. Return trip_id, start_station_id, and start_time for trips with no recorded end station. Paste the row count and the first 3 rows. (It should reconcile with the 3,767 anchor above.)
+
+3767
+"trip_id","start_station_id","start_time","end_station_id"
+"T0168031","S06","2025-01-01 08:17:12",""
+"T0043727","S12","2025-01-01 10:24:35",""
+"T0237204","S03","2025-01-01 16:18:45",""
+
+
+TODO 7b. The ops lead asks for "every trip that did not end at Market Square (S01)." Write the naive version first: WHERE end_station_id <> 'S01'. Paste the row count.
+
+223918
+
+TODO 7c. Now write the version that also keeps the never-docked trips, and paste its row count.
+
+227685
+
+TODO 7d. (Combines IS NULL with IN; not combined in class.) Return trip_id and start_station_id for trips that started at one of the three South Knoxville stations (S14, S15, S16) and have no recorded end station. Paste the row count and the first 3 rows.
+
+238
+
+"trip_id","start_station_id"
+"T0084969","S16"
+"T0197506","S14"
+"T0238948","S15"
+
+Q7e: Subtract 7b from 7c. Explain in 2–3 sentences why the naive <> filter silently dropped exactly that many rows; your answer must use the word unknown.
+
+3,767
+Because there are end_station_ids that are empty making them unknown values. So when we add in "OR end_station_id IS NULL" than those 3,767 "stations get added back in to the count. It is more specific as we are only excluding S01 and not S01 and empty end_station_id rides.
+
+Q7f: Which of 7b or 7c actually answers the ops lead's question as she asked it? Defend your choice; there is a reasonable case either way, so say what you would confirm with her.
+
+7c Because the rides that have no end station were still rides so and may or may not have ended at Market-Square. They do not point to ending at Market-Square or any other station so they do not add to the market square metric comparison. However both metrics should be noted.
 
 
 
