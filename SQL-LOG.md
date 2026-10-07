@@ -447,6 +447,8 @@ LIMIT 8;
 
 TODO 9d. Commit queries/ and SQL-LOG.md on a branch named feature/sql-week7-queries, push it, and open a pull requestinto main with a description saying what the queries answer. Merge it. Paste the PR URL into the log (and submit it on Canvas).
 
+https://github.com/cbisho/ride-knox-analysis/pull/15
+
 branch is called M7, I already made all my commits on this branch...
 
 
@@ -490,6 +492,14 @@ Q9f: Which single condition in 9a would you defend most vigorously if the ops le
 
 The time decimal point, there could be mistakes or bugs of very short rides that would not be relevant to the analysis.
 
+Reflection + AI Disclosure (5 pts); answer in SQL-LOG.md
+R1. Several tasks this week had a "naive version" and a "correct version" that both ran without error (4c/4d, 5a/5b, 5d, 7b/7c). In 2–3 sentences: what does that pattern teach you about checking SQL results that does not apply the same way to a Python traceback?
+
+Since, SQL has pointers to orphan rows you need to check nulls or they may end up in your analysis. Python stores the cleaning but you'll have to remeber it when do new queries.
+
+R2. AI disclosure: describe any use of generative AI tools in this assignment, or state "No generative AI tools were used." Example: "I used a generative AI tool to explain why comparing a column to NULL returns no rows. All final queries, results, and conclusions are my own."
+
+No AI tools were used, used the slides.
 
 
 
