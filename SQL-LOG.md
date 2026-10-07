@@ -121,5 +121,84 @@ In class, SELECT DISTINCT rider_type returned six values instead of two. State t
 
 Data bases are not exactly clean but SQL allows some logical choices which "normalizes" some objects in columns. Such as rider_type is all the same phrases with different casing, thus it gets normalized to a lower casing. How well this works needs to managed column by column as you cannot trust the database to be completely clean.
 
+# Part 4
+TODO 4a. Return all stations in the Fort Sanders neighborhood.
+
+"neighborhood","station_name"
+"Fort Sanders","Cumberland Ave & 17th St"
+"Fort Sanders","Fort Sanders - Laurel Ave"
+
+
+TODO 4b. Return station_id, station_name, and docks for stations with 20 or more docks.
+
+"station_id","station_name","docks"
+"S01","Market Square",20
+"S05","World's Fair Park",20
+"S06","Hodges Library",24
+"S08","Student Union - UT",24
+
+
+TODO 4c. Return the stations that are in UT Campus or Fort Sanders and have 16 or more docks. Your query must use parentheses.
+
+"station_name","docks","neighborhood"
+"The Hill - Ayres Hall",12,"UT Campus"
+"Fort Sanders - Laurel Ave",12,"Fort Sanders"
+
+
+TODO 4d. Write 4c a second time without the parentheses, run it, and paste that result too.
+
+"station_name","docks","neighborhood"
+"The Hill - Ayres Hall",12,"UT Campus"
+"Cumberland Ave & 17th St",16,"Fort Sanders"
+"Fort Sanders - Laurel Ave",12,"Fort Sanders"
+
+
+TODO 4e. Return all stations in South Knoxville or East Knoxville, using IN rather than a chain of ORs.
+
+"station_name","neighborhood"
+"South Waterfront","South Knoxville"
+"Suttree Landing Park","South Knoxville"
+"Ijams Nature Center","South Knoxville"
+"Zoo Knoxville","East Knoxville"
+"Caswell Park","East Knoxville"
+
+
+TODO 4f. Return station_id, station_name, and docks for stations whose dock count is between 12 and 16 inclusive, using BETWEEN.
+
+"station_id","station_name","docks"
+"S02","Gay Street & Union Ave",16
+"S03","Krutch Park",12
+"S04","Old City - Jackson Ave",16
+"S07","The Hill - Ayres Hall",12
+"S09","Neyland Stadium",16
+"S10","Ag Campus - Morgan Hall",12
+"S11","Cumberland Ave & 17th St",16
+"S12","Fort Sanders - Laurel Ave",12
+"S14","South Waterfront",12
+"S17","Happy Holler",12
+"S19","Broadway & Central",12
+"S22","Tyson Park",12
+"S23","Bearden - Kingston Pike",12
+
+
+Q4g: Compare your 4c and 4d results. How many rows does each return, which one answers the ops lead's question, and what does this tell you about operator precedence in SQL?
+
+4c; 2
+4d; 3 
+4d without paratheses, because it is 16 or more. AND gets get evaluated before OR.
+
+
+Q4h: Rewrite 4f as an equivalent WHERE clause using only >=, <=, and AND. Which version would you rather hand a colleague, and why?
+
+SELECT station_id, station_name, docks
+FROM stations
+WHERE docks BETWEEN 12 AND 16;
+
+SELECT station_id, station_name, docks
+FROM stations
+WHERE docks >=12 
+AND docks <=16;
+
+Second option, is an explicit operator.
 
 
