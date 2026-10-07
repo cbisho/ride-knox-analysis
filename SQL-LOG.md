@@ -83,7 +83,43 @@ TODO 2c:
 Q2d:
 It exists in my outputs console, but not in added to the table in the loaded database. A result set is a tempory data set made by your query.
 
+Q2e: 
+Give one concrete reason the ops team should not ask you for SELECT * FROM trips; when what they want is 2c's three columns.
 
+Becaue the "duration_hr" is a result set so it is not added to the database only an output of the users query, it is not a commited change.
+
+# Part 3
+
+TODO 3a:
+"neighborhood"
+"Downtown"
+"Old City"
+"World's Fair Park"
+"UT Campus"
+"UT Ag Campus"
+"Fort Sanders"
+"South Knoxville"
+"North Knoxville"
+"East Knoxville"
+"West Knoxville"
+"Bearden"
+"Sequoyah Hills"
+
+TODO 3b:
+25 
+"start_station_id"
+"S99"
+"S24"
+"S16"
+
+Q3c: Your 3b result contains a station ID that does not appear in stations. Name it, say what it is, and explain in one sentence why the database allowed a trip to reference a station that doesn't exist.
+
+S99, is not a real station but a bug from the app which resulted in a fake station. The database references a station that does not exist because it's an ID/foriegn key with nothing on the other end, which makes it an orphan row. SQL does not enforce removing these unless you select. 
+
+Q3d:
+In class, SELECT DISTINCT rider_type returned six values instead of two. State the general rule this illustrates about databases and data quality; in your own words, not the slide's
+
+Data bases are not exactly clean but SQL allows some logical choices which "normalizes" some objects in columns. Such as rider_type is all the same phrases with different casing, thus it gets normalized to a lower casing. How well this works needs to managed column by column as you cannot trust the database to be completely clean.
 
 
 
