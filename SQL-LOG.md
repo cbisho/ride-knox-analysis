@@ -250,4 +250,57 @@ Q5f: How many trips did the naive version in 5d miss? The ops lead says "it's on
 4851 trips.
 Even though 4851 trips may seem like a rounding error, it is best to keep the pipeline precise because it needs to evaluate trends and identify changes in Ride Knox customer behavior.
 
+# Part 6
+TODO 6a. Return station_id and station_name for every station whose name contains Ave.
+"station_id","station_name"
+"S02","Gay Street & Union Ave"
+"S04","Old City - Jackson Ave"
+"S11","Cumberland Ave & 17th St"
+"S12","Fort Sanders - Laurel Ave"
+
+
+TODO 6b. Return station_id, station_name, and neighborhood for stations whose station_id matches the pattern S2_ (the _wildcard, exactly one character).
+
+"station_id","station_name","neighborhood"
+"S20","Zoo Knoxville","East Knoxville"
+"S21","Caswell Park","East Knoxville"
+"S22","Tyson Park","West Knoxville"
+"S23","Bearden - Kingston Pike","Bearden"
+"S24","Sequoyah Hills Park","Sequoyah Hills"
+
+TODO 6c. Return station_id and neighborhood for stations whose neighborhood ends with the word Knoxville. Your pattern must anchor at the end; no leading-and-trailing % shortcut.
+
+IDK how to do without leading shortcut, but is anchored at end.
+
+"station_id","neighborhood","station_name"
+"S14","South Knoxville","South Waterfront"
+"S15","South Knoxville","Suttree Landing Park"
+"S16","South Knoxville","Ijams Nature Center"
+"S17","North Knoxville","Happy Holler"
+"S18","North Knoxville","Fourth & Gill"
+"S19","North Knoxville","Broadway & Central"
+"S20","East Knoxville","Zoo Knoxville"
+"S21","East Knoxville","Caswell Park"
+"S22","West Knoxville","Tyson Park"
+
+
+TODO 6d. (Combines LIKE with ORDER BY and LIMIT; a combination the slides never showed together.) Of the stations matching 6c, return the 3 with the most docks, showing station_name, neighborhood, and docks.
+
+"station_id","neighborhood","station_name","docks"
+"S14","South Knoxville","South Waterfront",12
+"S17","North Knoxville","Happy Holler",12
+"S19","North Knoxville","Broadway & Central",12
+
+Q6e: You run WHERE station_name LIKE '%park%' (lowercase) in SQLite and get the same rows as '%Park%'. Would that still be true if Ride Knox's production PostgreSQL database ran the identical query? What should you write instead if you mean "case-insensitive"?
+
+Not be the same is PostgreSQL.
+
+WHERE LOWER(station_name) LIKE '%park%'
+
+
+
+
+
+
+
 
