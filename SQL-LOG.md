@@ -333,6 +333,62 @@ Q7f: Which of 7b or 7c actually answers the ops lead's question as she asked it?
 
 7c Because the rides that have no end station were still rides so and may or may not have ended at Market-Square. They do not point to ending at Market-Square or any other station so they do not add to the market square metric comparison. However both metrics should be noted.
 
+# Part 8:
+
+TODO 8a. Return station_id, station_name, docks, and year_installed for all stations, oldest first, breaking ties by largest dock count first. (Class sorted by docks then name; this is the other way around, in the other directions.)
+"station_id","station_name","docks","year_installed"
+"S06","Hodges Library",24,2022
+"S08","Student Union - UT",24,2022
+"S01","Market Square",20,2022
+"S05","World's Fair Park",20,2022
+"S02","Gay Street & Union Ave",16,2022
+"S04","Old City - Jackson Ave",16,2022
+"S11","Cumberland Ave & 17th St",16,2022
+"S03","Krutch Park",12,2022
+"S07","The Hill - Ayres Hall",12,2022
+"S09","Neyland Stadium",16,2023
+"S10","Ag Campus - Morgan Hall",12,2023
+"S12","Fort Sanders - Laurel Ave",12,2023
+"S14","South Waterfront",12,2023
+"S17","Happy Holler",12,2023
+"S22","Tyson Park",12,2023
+"S13","Second Creek Greenway",10,2023
+"S19","Broadway & Central",12,2024
+"S15","Suttree Landing Park",10,2024
+"S16","Ijams Nature Center",10,2024
+"S18","Fourth & Gill",10,2024
+"S20","Zoo Knoxville",10,2024
+"S21","Caswell Park",10,2024
+"S23","Bearden - Kingston Pike",12,2025
+"S24","Sequoyah Hills Park",10,2025
+
+
+TODO 8b. Using that same ordering, return rows 6 through 10 only; not the first 5.
+
+"station_id","station_name","docks","year_installed"
+"S04","Old City - Jackson Ave",16,2022
+"S11","Cumberland Ave & 17th St",16,2022
+"S03","Krutch Park",12,2022
+"S07","The Hill - Ayres Hall",12,2022
+"S09","Neyland Stadium",16,2023
+
+
+TODO 8c. Return the 3 newest stations, showing station_name, neighborhood, and year_installed.
+
+"station_name","neighborhood","year_installed"
+"Bearden - Kingston Pike","Bearden",2025
+"Sequoyah Hills Park","Sequoyah Hills",2025
+"Suttree Landing Park","South Knoxville",2024
+
+
+Q8d: A colleague sends you SELECT station_name FROM stations LIMIT 3; and calls it "the three biggest stations." Give the two-part reason this is wrong, and write the query that would be right.
+
+That is incorrect because SQL rows have no order so they are just showing a random sample of 3 rows from their query. By biggest, I am unsure whether they mean in area or docks, but I am going to assume docks because that is represenative a bit to traffic.
+
+Right:
+SELECT station_name, docks
+FROM stations, 
+ORDER BY docks DESC; 
 
 
 
