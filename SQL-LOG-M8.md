@@ -102,6 +102,59 @@ rider_type column is just a text value, selected arbitrary by SQL. Reader would 
 # Q3d:
 If you ran 3b in PostgreSQL tou would get an error. In SQL the grouping rule aggregates values into one-roew per group, each selected column needs to be defined in the GROUP BY command so it is aggregated properly.
 
+## Part 4:
+
+# TODO 4a:
+"start_station_id","trip_count"
+"S06",26058
+"S08",24959
+"S01",22606
+"S11",18934
+"S02",16542
+"S05",15398
+
+# TODO 4b:
+"start_station_id","trip_count"
+"S06",1721
+"S08",1663
+"S01",1480
+"S11",1232
+"S02",1170
+
+# TODO 4c:
+"month","trip_count"
+"06",31528
+"05",29843
+"07",27134
+"04",25597
+
+# TODO 4d:
+SQLITE_ERROR: near "WHERE": syntax error
+
+# Q4e:
+WHERE filters the rows before groups, so when you run GROUP BY after WHERE, the aggregated values don't exist yet so WHERE cannot filter/read the groups because they change in the next command.
+
+# Q4f:
+
+SELECT
+    start_station_id,
+    COUNT(*) AS trip_count
+FROM trips
+WHERE bike_type = 'electric'
+    AND start_time >= '2025-10-01'
+GROUP BY start_station_id
+HAVING COUNT(*) >= 300
+ORDER BY trip_count DESC
+LIMIT 5;
+
+WHERE --> fiters trips
+HAVING --> filters stations
+
+Moving bike_type into the "HAVING" command would not be a good idea as it violates the grouping rule. WHERE is a defined condition of "electric" bikes and HAVING is the aggregation of counts. 
+
+
+
+
 
 
 
