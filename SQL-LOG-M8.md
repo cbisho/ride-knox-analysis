@@ -80,8 +80,27 @@ GROUPBY is organizing the values in rider_type which has 12 separate variations,
 
 # Q2f:
 The wide form is the data transposed so the rows become columns. 
-For python/pandas it is df.T
+For python/pandas it is a pivot_table.
 
+## Part 3:
+# TODO 3a:
+"rider_type","electric_bike","classic_bike"
+"member",60163,98379
+"casual",34920,56538
+"rider_type:text",0,0
+
+# TODO 3b
+"bike_type","rider_type","trip_count"
+"bike_type:TEXT","rider_type:TEXT",1
+"classic","casual",154917
+"electric","casual",95083
+
+# Q3c:
+Clean-looking answer.
+rider_type column is just a text value, selected arbitrary by SQL. Reader would not be able to tell anything is wrong because it looks like they were grouped, even though each bike_type contains every rider_type.
+
+# Q3d:
+If you ran 3b in PostgreSQL tou would get an error. In SQL the grouping rule aggregates values into one-roew per group, each selected column needs to be defined in the GROUP BY command so it is aggregated properly.
 
 
 
