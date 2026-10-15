@@ -27,6 +27,64 @@ Distinct start station ID does not match station #, there are only 24 stations i
 # Q1e: 
 I would put 1c in the report, with a sentence saying that outlier trips of durations longer than 6 hours or less than one minute were excluded from calculations.
 
+## Part 2:
+
+# TODO 2a:
+"start_station_id","trip_count_per_station"
+"S06",26058
+"S08",24959
+"S01",22606
+"S11",18934
+"S02",16542
+
+"COUNT(trip_count_per_station)"
+26
+
+# TODO 2b:
+"hour","trip_count_per_hour"
+"17",25178
+"08",21766
+"18",21404
+"16",19220
+"12",16690
+"07",14910
+
+# TODO 2c:
+"rider_type","bike_type","trip_count_per_rider_and_bike"
+"member","classic",98379
+"member","electric",60163
+"casual","classic",56538
+"casual","electric",34920
+
+# TODO 2d:
+"rider_type","bike_type","trip_count_per_rider_and_bike"
+"member","classic",94928
+"member","electric",58089
+"casual","classic",54498
+"casual","electric",33692
+"Member","classic",1970
+"MEMBER","classic",1481
+"Member","electric",1192
+"Casual","classic",1188
+"MEMBER","electric",882
+"CASUAL","classic",852
+"Casual","electric",710
+"CASUAL","electric",518
+
+12 rows
+
+# Q2e:
+2d returned 12 rows, the rider-types all exist but they differ in syntax. There is only 'member' and 'casual' but the data contains "MEMBER" "CASUAL" "Casual" "Member" as separate inputs when not normalized. 
+
+GROUPBY is organizing the values in rider_type which has 12 separate variations, each variation becomes a value to GROUPBY to organize the data.
+
+# Q2f:
+The wide form is the data transposed so the rows become columns. 
+For python/pandas it is df.T
+
+
+
+
 
 
 
