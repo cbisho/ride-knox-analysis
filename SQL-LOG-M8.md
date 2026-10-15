@@ -251,7 +251,13 @@ ON vs WHERE, change ON to WHERE. drops stations with null entries excluding some
 * 1.0 the dock to arrival ratio would not be properly rounded and could yield incorrect rankings.
 
 
+## AI disclosure:
+# R1
+ON vs WHERE, because it makes sense in a way to exlude entries that are 0, even if those entries contain information. Especially for a first pass, also WHERE seems more of intuitive choice to search rather than ON.
 
+# R2
+I used AI and google search to explain further the GROUP BY rule.
+Used Slides and M8S12.sql file for help and guidance.
 
 
 
