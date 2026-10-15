@@ -152,6 +152,53 @@ HAVING --> filters stations
 
 Moving bike_type into the "HAVING" command would not be a good idea as it violates the grouping rule. WHERE is a defined condition of "electric" bikes and HAVING is the aggregation of counts. 
 
+## Part 5:
+# TODO 5a:
+16311 rows
+"trip_id","start_time","station_name","docks"
+"T0094124","2025-01-01 01:19:33","Old City - Jackson Ave",16
+"T0158367","2025-01-01 06:14:57","Cumberland Ave & 17th St",16
+"T0115606","2025-01-01 07:49:31","Fort Sanders - Laurel Ave",12
+"T0051723","2025-01-01 08:28:33","Fort Sanders - Laurel Ave",12
+"T0139613","2025-01-01 08:46:28","Old City - Jackson Ave",16
+
+
+# TODO 5b:
+Row Count = 246233
+
+# TODO 5c:
+Row count = 12
+"neighborhood","trips","avg_duration_min"
+"UT Campus",78141,28.71
+"Downtown",49760,27.58
+"Fort Sanders",28408,28.95
+"World's Fair Park",21455,25.13
+"North Knoxville",17065,28.8
+
+# Q5d:
+Lost 3,767 rows, because there is no_end_station ID that is a null group and null entries cannot be joined/matched in the JOIN.
+
+In class rows disappeared due to the false start_station S99 which is not real so did not match when being joined, so those rows disappeared.
+
+# Q5e:
+Station_id would be ambiguous because it is also included in trips *_station_id where * is start or end. 
+
+If the names are the exact same SQLite won't run and will give an error for ambiguous column name.
+
+# Q6f:
+No station_name is not in the trips table. The JOIN recalled the information from the trip's station_ID and looked those up with the table stations. It's a cross-reference and does not copy into the table when joined. It is kept separate so that station_name is not repeated and stored for every trip that occurs.
+
+
+## Part 6:
+
+# TODO 6a:
+"end_station_id","empty_trips"
+"",3767
+
+# TODO 6b:
+
+
+
 
 
 
