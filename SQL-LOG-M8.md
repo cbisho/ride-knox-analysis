@@ -261,10 +261,22 @@ Used Slides and M8S12.sql file for help and guidance.
 
 
 
+Think I made a mistake when pushing to git:
+git push origin HEAD:main
 
 
 
+Enumerating objects: 64, done.
+Counting objects: 100% (64/64), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (61/61), done.
+Writing objects: 100% (62/62), 10.86 KiB | 5.43 MiB/s, done.
+Total 62 (delta 33), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (33/33), completed with 1 local object.
+To https://github.com/cbisho/ride-knox-analysis
+   604dad0..0b22cb4  HEAD -> main
 
+   SO PR was empty.
 
 
 
