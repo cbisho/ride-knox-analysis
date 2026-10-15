@@ -217,7 +217,38 @@ Row count --> 24
 "Gay Street & Union Ave","S02",5
 
 # TODO 6d:
+"station_name","station_id","late_trips"
+"Suttree Landing Park","S15",1
+"Tyson Park","S22",1
+"South Waterfront","S14",0
+"Ijams Nature Center","S16",0
+"Zoo Knoxville","S20",0
+"Caswell Park","S21",0
+"Sequoyah Hills Park","S24",0
 
+# Q6e:
+Version 2, she specifies for all 24 stations, so that includes ones with 0 late night trips.
+Since no late_night trips are found in the WHERE query they are unknown values and excluded in Version 1 and omitted once not found.
+
+# Q6f:
+COUNT(*) would of put a 1 instead of a 0. In the JOIN the station is retained and the column cannot be empty so the 1 becomes a placeholder. t.trip ID has the nulls included so null = 0 when COUNT(t.trip) is used. 
+
+## Part 7:
+# TODO 7a:
+"station_name","neighborhood","docks","Q4_arrivals","arrivals_per_dock"
+"Cumberland Ave & 17th St","Fort Sanders",16,3381,211.31
+"The Hill - Ayres Hall","UT Campus",12,2454,204.5
+"Market Square","Downtown",20,3919,195.95
+"Hodges Library","UT Campus",24,4525,188.54
+"Student Union - UT","UT Campus",24,4253,177.21
+
+# Q 7c:
+Top 4 stations are the same. Past Top4 output is not shown. But one appearing high on one list and not the other, would show that a specific station is a destination where people commute to for purpose. Such as school. Student housing might be spread but their classes will be on campus so they will all want to arrive on campus.
+
+# Q 7d:
+ON vs WHERE, change ON to WHERE. drops stations with null entries excluding some stations.
+
+* 1.0 the dock to arrival ratio would not be properly rounded and could yield incorrect rankings.
 
 
 
