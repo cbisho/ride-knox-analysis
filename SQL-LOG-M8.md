@@ -196,6 +196,30 @@ No station_name is not in the trips table. The JOIN recalled the information fro
 "",3767
 
 # TODO 6b:
+No duplicate station names.
+
+# TODO 6c:
+Row count --> 19
+"station_name","station_id","late_trips"
+"Market Square","S01",8
+"Krutch Park","S03",7
+"Hodges Library","S06",7
+"Student Union - UT","S08",6
+"Gay Street & Union Ave","S02",5
+
+ON change:
+Row count --> 24
+"station_name","station_id","late_trips"
+"Market Square","S01",8
+"Krutch Park","S03",7
+"Hodges Library","S06",7
+"Student Union - UT","S08",6
+"Gay Street & Union Ave","S02",5
+
+# TODO 6d:
+
+
+
 
 
 
